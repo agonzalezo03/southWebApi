@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: southWebApi
+    env: java
+    buildCommand: ./install_maven.sh && mvn clean package
+    startCommand: java -jar target/your-app.jar
+    build:
+      docker:
+        file: Dockerfile
